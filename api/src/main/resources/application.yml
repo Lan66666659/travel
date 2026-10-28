@@ -14,11 +14,10 @@ spring:
       max-request-size: 10MB
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    # 数据库名online-travel-db请根据自己本机实际创建的数据库进行修改。切记别把连接名当成数据库名！
-    url: jdbc:mysql://localhost:3306/online-travel-db?characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://10.3.110.172:3306/travel_db?characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true
     username: root
-    # 改成自己root用户的密码
-    password: 123456
+    # 这里改成你云托管数据库的root密码！不要还是123456
+    password: Lan20051018
 # Mybatis Plus配置
 mybatis-plus:
   configuration:
@@ -28,7 +27,3 @@ mybatis-plus:
     db-config:
       id-type: auto # 主键策略
   mapper-locations: classpath*:/mapper/**/*.xml # mapper文件位置
-
-
-
-
